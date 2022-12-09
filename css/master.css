@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+:root{
+    --dark-color:#053742;
+    --blue-color:#39A2DB;
+    --blue-light:#A2DBFA;
+    --white-color:#E8F0F2;
+    --gray-color:#eee;
+    
+}
+body{
+    font-family: 'Roboto',sans-serif;
+    background: var(--blue-light);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    background: var(--blue-light);
+    width: 95vw;
+    height: 95vh;
+    padding: 20px;
+    display: grid;
+    border-radius: 10px;
+    grid-template-columns: 5fr 3fr;
+}
+.imgs-holder{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+.imgs-holder img,canvas{
+    max-width: 50vw;
+    max-height: 60vh;
+}
+.upload input{
+    display:none;
+
+}
+.upload label{
+    color: var(--dark-color);
+    border: 2px var(--dark-color) dashed;
+    padding: 8px 20px;
+    cursor: pointer;
+}
+.filters ul{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    direction: rtl
+}
+.filters ul li{
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+}
+.filters ul li label{
+    color:var(--gray-color) ;
+}
+.filters ul li:last-child{
+    flex-direction: row;
+    justify-content: space-around;
+}
+.filters ul li a,span{
+    padding: 10px 20px;
+    background: var(--blue-color);
+    color: var(--gray-color);
+    border-radius: 6px;
+    cursor: pointer;
+}
+@media screen and (max-width:650px) {
+    .container{
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    .imgs-holder img,canvas{
+        max-width: 80vw;
+    }
+
+}
